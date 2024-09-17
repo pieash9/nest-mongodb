@@ -29,3 +29,18 @@ Content-Type: application/json
 
 ### find by id
 DELETE  http://localhost:3000/songs/66e9b2722b24807180c3d06c
+
+
+
+
+### create album
+POST http://localhost:3000/albums
+Content-Type: application/json
+
+{
+  "title":"test album",
+  "songs":["66e9a680b9a959fa3e8e131d","66e9a758dbdb22d19f6e5b26"]
+}
+
+### get all album
+GET http://localhost:3000/albums

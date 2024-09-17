@@ -3,4 +3,5 @@ export class CreateSongDTO {
   releasedDate: Date;
   duration: Date;
   lyrics: string;
+  album: string;
 }
