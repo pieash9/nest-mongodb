@@ -1,0 +1,31 @@
+### create songs
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+  "title": "Test good babe",
+  "releasedDate": "2011-05-11",
+  "duration": "02:33",
+  "lyrics": "Test like never"
+}
+
+### find all songs
+GET http://localhost:3000/songs
+
+### find by id
+GET http://localhost:3000/songs/66e9a680b9a959fa3e8e131d
+
+
+### update songs
+PATCH  http://localhost:3000/songs/66e9a680b9a959fa3e8e131d
+Content-Type: application/json
+
+{
+  "title": "updated one",
+  "releasedDate": "2011-05-11",
+  "duration": "02:33",
+  "lyrics": "Test like never"
+}
+
+### find by id
+DELETE  http://localhost:3000/songs/66e9b2722b24807180c3d06c

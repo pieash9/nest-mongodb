@@ -18,6 +18,10 @@ export class Song {
     required: true,
   })
   duration: string;
+
+  @Prop({
+    required: true,
+  })
   lyrics: string;
 }
 export const SongSchema = SchemaFactory.createForClass(Song);
