@@ -4,12 +4,11 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { SongsModule } from './songs/songs.module';
 import { AlbumsModule } from './albums/albums.module';
+import 'dotenv/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://pieash9:nVoDIXXg0nKuhJMX@cluster0.2au1tbt.mongodb.net/spotify-clone?retryWrites=true&w=majority',
-    ),
+    MongooseModule.forRoot(process.env.DB_URL),
     SongsModule,
     AlbumsModule,
   ],
