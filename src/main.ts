@@ -1,8 +1,13 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+import { Server } from 'http';
 
-async function bootstrap() {
+export async function bootstrap(): Promise<Server> {
   const app = await NestFactory.create(AppModule);
+  app.enableCors(); // Optional, enable CORS if needed
   await app.listen(3000);
+  return app.getHttpServer();
 }
-bootstrap();
+
+// Export handler for Vercel
+export default bootstrap();
