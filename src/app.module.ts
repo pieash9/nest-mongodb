@@ -9,10 +9,6 @@ import { AlbumsModule } from './albums/albums.module';
   imports: [
     MongooseModule.forRoot(
       'mongodb+srv://pieash9:nVoDIXXg0nKuhJMX@cluster0.2au1tbt.mongodb.net/spotify-clone?retryWrites=true&w=majority',
-      {
-        connectTimeoutMS: 10000, // Timeout after 10 seconds
-        retryWrites: true,
-      },
     ),
     SongsModule,
     AlbumsModule,
